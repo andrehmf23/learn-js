@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Responsividade -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título da aba -->
+    <title>learn.js</title>
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 id="l1" class="test">learn.js</h1>
+    <h1 id="l2" class="test">learn.js</h1>
+
+    <!-- Títulos -->
+    <h1 id="titulo-principal">H1 - Título Principal</h1>
+
+    <h2 class="subtitulo">H2 - Subtítulo</h2>
+
+    <h3>H3 - Seção</h3>
+
+    <h4>H4 - Subseção</h4>
+
+    <h5>H5 - Menor</h5>
+
+    <h6>H6 - Muito pequeno</h6>
+
+    <hr>
+
+    <!-- Parágrafo -->
+    <p title="Parágrafo simples">
+        Este é um parágrafo.
+    </p>
+
+    <!-- Texto forte -->
+    <strong>Texto importante</strong>
+
+    <br>
+
+    <!-- Texto em itálico -->
+    <em>Texto enfatizado</em>
+
+    <br><br>
+
+    <!-- Link -->
+    <a
+        href="https://github.com"
+        target="_blank"
+        title="Abrir GitHub">
+        Abrir GitHub
+    </a>
+
+    <hr>
+
+    <!-- Imagem -->
+    <img
+        src="https://via.placeholder.com/200"
+        alt="Imagem exemplo"
+        width="200"
+        height="200">
+
+    <hr>
+
+    <!-- Div -->
+    <div class="container">
+        Esta é uma DIV
+    </div>
+
+    <hr>
+
+    <!-- Span -->
+    <span style="color: blue;">
+        Isto é um SPAN
+    </span>
+
+    <hr>
+
+    <!-- Lista não ordenada -->
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <!-- Lista ordenada -->
+    <ol>
+        <li>Primeiro</li>
+        <li>Segundo</li>
+        <li>Terceiro</li>
+    </ol>
+
+    <hr>
+
+    <!-- Botão -->
+    <button type="button">
+        Clique aqui
+    </button>
+
+    <hr>
+
+    <!-- Formulário -->
+    <form>
+
+        <!-- Input texto -->
+        <label for="nome">Nome:</label>
+
+        <input
+            type="text"
+            id="nome"
+            placeholder="Digite seu nome"
+            required>
+
+        <br><br>
+
+        <!-- Input senha -->
+        <label for="senha">Senha:</label>
+
+        <input
+            type="password"
+            id="senha"
+            placeholder="Digite sua senha">
+
+        <br><br>
+
+        <!-- Email -->
+        <input
+            type="email"
+            placeholder="Digite seu email">
+
+        <br><br>
+
+        <!-- Número -->
+        <input
+            type="number"
+            min="0"
+            max="100">
+
+        <br><br>
+
+        <!-- Checkbox -->
+        <input
+            type="checkbox"
+            id="aceitar">
+
+        <label for="aceitar">
+            Aceitar termos
+        </label>
+
+        <br><br>
+
+        <!-- Radio -->
+        <input
+            type="radio"
+            name="sexo"
+            id="masculino">
+
+        <label for="masculino">
+            Masculino
+        </label>
+
+        <input
+            type="radio"
+            name="sexo"
+            id="feminino">
+
+        <label for="feminino">
+            Feminino
+        </label>
+
+        <br><br>
+
+        <!-- Select -->
+        <select>
+
+            <option>JavaScript</option>
+
+            <option>Python</option>
+
+            <option>C++</option>
+
+        </select>
+
+        <br><br>
+
+        <!-- Textarea -->
+        <textarea
+            rows="5"
+            cols="30"
+            placeholder="Digite algo">
+        </textarea>
+
+        <br><br>
+
+        <!-- Submit -->
+        <input
+            type="submit"
+            value="Enviar">
+
+    </form>
+
+    <hr>
+
+    <!-- Tabela -->
+    <table border="1">
+
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+        </tr>
+
+        <tr>
+            <td>André</td>
+            <td>20</td>
+        </tr>
+
+        <tr>
+            <td>Maria</td>
+            <td>22</td>
+        </tr>
+
+    </table>
+
+    <hr>
+
+    <!-- Vídeo -->
+    <video
+        width="300"
+        controls>
+
+        <source src="video.mp4" type="video/mp4">
+
+    </video>
+
+    <hr>
+
+    <!-- Áudio -->
+    <audio controls>
+
+        <source src="audio.mp3" type="audio/mpeg">
+
+    </audio>
+
+    <hr>
+
+    <!-- Iframe -->
+    <iframe
+        src="https://example.com"
+        width="400"
+        height="200">
+    </iframe>
+
+    <hr>
+
+    <!-- Detalhes expansíveis -->
+    <details>
+
+        <summary>
+            Clique para abrir
+        </summary>
+
+        <p>
+            Conteúdo escondido.
+        </p>
+
+    </details>
+
+    <hr>
+
+    <!-- Código -->
+    <code>
+        console.log("Hello World");
+    </code>
+
+    <pre>
+function teste() {
+    return true;
+}
+    </pre>
+
+    <hr>
+
+    <!-- Script JS -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
