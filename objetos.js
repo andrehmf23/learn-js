@@ -81,17 +81,100 @@ console.log(JSON.stringify(atalho))
 
 // Mesclar Objetos — unir propriedades.
 
-const usuario = {
+function mesclar(obj1, obj2) {
+    let result = {};
+    for (const element of Object.entries(obj1)) {
+        result[element[0]] = element[1];
+    }
+    for (const element of Object.entries(obj2)) {
+        result[element[0]] = element[1];
+    }
+    return result
+}
+
+console.log(mesclar({
     nome: "João",
     idade: 32
-};
-
-const contato = {
+}, 
+{
     email: "joão@email.com",
     telefone: "99999-9999"
+}));
+
+// Deep Clone — copiar objetos profundamente.
+
+const empresa = {
+    nome: "Tech Solutions",
+
+    endereco: {
+        cidade: "São Paulo",
+        estado: "SP",
+
+        coordenadas: {
+            latitude: -23.5505,
+            longitude: -46.6333
+        }
+    },
+
+    funcionarios: [
+        {
+            nome: "Ana",
+            habilidades: ["JavaScript", "TypeScript"],
+            contato: {
+                email: "ana@email.com"
+            }
+        },
+        {
+            nome: "Carlos",
+            habilidades: ["Python", "SQL"],
+            contato: {
+                email: "carlos@email.com"
+            }
+        }
+    ],
+
+    departamentos: [
+        {
+            nome: "TI",
+            projetos: [
+                { nome: "Sistema A" },
+                { nome: "Sistema B" }
+            ]
+        }
+    ]
 };
 
+function deepClone(obj) {
 
+    let result = Array.isArray(obj) ? [] : {};
+
+    if (Array.isArray(obj)) {
+        for (const item of obj) {
+            result.push(
+                typeof item === "object" && item !== null
+                    ? deepClone(item)
+                    : item
+            );
+        }
+    } else {
+        for (const element of Object.entries(obj)) {
+            result[element[0]] = 
+            typeof element[1] === "object" && element[1] != null ? 
+            deepClone(element[1]) : 
+            element[1];
+        }
+    }
+
+    return result;
+}
+
+const copyempresa = deepClone(empresa);
+copyempresa.nome = "Tech Analytics"
+
+console.log(JSON.stringify(empresa));
+console.log(JSON.stringify(copyempresa));
+
+// Comparar Objetos — verificar igualdade.
 
 
 
