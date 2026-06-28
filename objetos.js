@@ -176,6 +176,39 @@ console.log(JSON.stringify(copyempresa));
 
 // Comparar Objetos — verificar igualdade.
 
+function compareObj(obj1, obj2) {
+
+    if (Array.isArray(obj1) && Array.isArray(obj2)) {
+        const size = obj1.length;
+        if (size !== obj2.length) return false;
+
+        for (let i = 0; i < size; i++) {
+            if (obj1[i] !== obj2[i]) return false;
+        }
+        
+    } else if (!Array.isArray(obj1) && !Array.isArray(obj2)) {
+        const e1 = Object.entries(obj1);
+        const size = e1.length;
+        const e2 = Object.entries(obj2);
+        if (size !== e2.length) return false;
+        
+        console.log("Size: ", size)
+    
+        for (let i = 0; i < size; i++) {
+            if (e1[i][0] !== e2[i][0] || e1[i][1] !== e2[i][1]) return false;
+
+            if ((typeof e1[i][1]) === (typeof e2[i][1]) && typeof e1[i][1] === "object" && !compareObj(e1[i][1],e2[i][1])) return false;
+        }
+    } else return false;
+    
+
+    return true;
+}
+
+console.log({nome: "Felipe", idade: 18})
+
+
+console.log(compareObj({nome: "Felipe", idade: 18},{nome: "Felipe", idade: 18}))
 
 
 
